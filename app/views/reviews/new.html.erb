@@ -1,0 +1,7 @@
+<%= simple_form_for [ @restaurant, @review ] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: 0..5 %>
+  <%= f.submit "Submit review", class: "btn btn-primary mt-3" %>
+<% end %>
+
+<%= link_to 'Back to list', restaurants_path, class:"d-flex justify-content-center" %>
